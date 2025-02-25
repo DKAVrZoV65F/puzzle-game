@@ -23,7 +23,11 @@ jobs:
           java-version: '22'
 
       - name: Compile project
-        run: javac Main.java
+        run: |
+          cd src
+          javac Main.java
 
       - name: Run tests
-        run: java Main
+        run: |
+          cd src
+          java Main
